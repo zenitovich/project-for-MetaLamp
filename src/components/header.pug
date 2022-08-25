@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style
+            include ../styles/components/header.scss
+    body
+        .logo
+            img(src="../img/Logo.png" alt="Лого")
+            
+        ul.navigation 
+            li.list-item: a(href="#").link-item  О нас
+            li.list-item: a(href="#").link-item.dropdown Услуги
+            li.list-item: a(href="#").link-item Вакансии
+            li.list-item: a(href="#").link-item Новости
+            li.list-item: a(href="#").link-item.dropdown Соглашения
+            li.list-item.buttons
+                a(href="#")
+                    button.in Войти
+                a(href="#")
+                    button.reg Зарегестрироваться
