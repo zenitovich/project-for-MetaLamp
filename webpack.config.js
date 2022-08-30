@@ -38,7 +38,7 @@ module.exports = {
   entry: "./main.js",
   output: {
     filename: filename("js"),
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
   },
   performance: {
     hints: false,
