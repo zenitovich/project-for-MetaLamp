@@ -67,12 +67,12 @@ module.exports = {
           filename: `./${page.replace(/\.pug/, ".html")}`,
         })
     ),
-    new HTMLWebpackPlugin({
-    template: "./pages/index.pug",
-      minify: {
-        collapseWhitespace: isProd,
-      },
-    }),
+    // new HTMLWebpackPlugin({
+    // template: "./pages/index.pug",
+    //   minify: {
+    //     collapseWhitespace: isProd,
+    //   },
+    // }),
     new HtmlWebpackPugPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
