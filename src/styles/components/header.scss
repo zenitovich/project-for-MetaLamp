@@ -13,37 +13,41 @@ body {
         margin: auto 10%;
     }
     ul {
-        margin: auto 10%;
+        margin: auto auto;
         display: flex;
         flex-direction:row;
         justify-content: space-between;
+        li {
+          margin-right: 25px;
+          list-style-type: none;
+          a{
+            text-decoration: none;
+            color: rgba(31, 32, 65, 0.5);
+          }
+      }
     }
-}
-
-ul li.list-item.buttons {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
 }
 
 button.in {
     box-sizing: border-box;
-    position: absolute;
-    border-radius: 10%;
+    border-radius: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #BC9CFF;
     border-color: #BC9CFF;
-    padding: 30% 25%;
+    padding: 10%;
+    a{
+      color: #BC9CFF;;
+  }
 }
 button.reg {
     box-sizing: border-box;
-    position: absolute;
-    border-radius: 10%;
+    border-radius: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #FFFFFF;
     border-color: #BC9CFF;
-    padding: 30% 25%;
+    padding: 3%;
     background-color: #BC9CFF;
+    a{
+      color: #FFFFFF;
+  }
 }
