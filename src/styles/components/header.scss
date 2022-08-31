@@ -1,53 +1,65 @@
-body {
-    background-color: #FFFFFF;
-    color: rgba(31, 32, 65, 0.5);
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+header {
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+  .logo {
+    margin: auto auto;
+  }
+  ul {
+    margin: auto auto;
     display: flex;
-    flex-direction:row;
     justify-content: space-between;
-    align-items: center;
-    font-family: 'Montserrat';
-    .logo {
-        width: 7%;
-        height: 57%;
-        margin: auto 10%;
-    }
-    ul {
-        margin: auto auto;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        li {
-          margin-right: 25px;
-          list-style-type: none;
-          a{
-            text-decoration: none;
-            color: rgba(31, 32, 65, 0.5);
-          }
+    li {
+      margin-right: 20px;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: rgba(31, 32, 65, 0.5);
       }
     }
+  }
 }
 
 button.in {
-    box-sizing: border-box;
-    border-radius: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-color: #BC9CFF;
-    padding: 10%;
-    a{
-      color: #BC9CFF;;
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: #bc9cff;
+  background-color: #ffffff;
+  a {
+    color: #bc9cff;
   }
 }
 button.reg {
-    box-sizing: border-box;
-    border-radius: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-color: #BC9CFF;
-    padding: 3%;
-    background-color: #BC9CFF;
-    a{
-      color: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: #bc9cff;
+  background-color: #bc9cff;
+  a {
+    color: #ffffff;
+  }
+}
+li.list-item.dropdown{
+  position: relative;
+  margin-right: 30px;
+  ::after {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    content: '';
+    border: 2px solid red;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    border-color: rgba(31, 32, 65, 0.5);
+    top: 25%;
+    right: -10px;
   }
 }
