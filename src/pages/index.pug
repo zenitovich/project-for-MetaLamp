@@ -1,1 +1,16 @@
 extends ../layout/default.pug
+block title
+block scripts
+block content 
+    main
+        .number_selection 
+            h1 Найдём номера под ваши пожелания
+            .arrival Прибытие
+                .select <input type="date" class="date">
+            .departure Выезд
+                .select <input type="date" class="date">
+            .guests Гости
+                .select
+                    select
+                        option="Сколько гостей"
+            <input type="submit" class="submit" value="Подобрать номер">
