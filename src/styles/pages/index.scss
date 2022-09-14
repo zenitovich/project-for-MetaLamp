@@ -41,6 +41,7 @@ main {
     border-radius: 4px;
 }
 .arrival, .guests, .departure {
+    position: relative;
     margin-left: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -59,6 +60,18 @@ select {
 }
 .departure {
     margin-left: 20px;
+    ::after {
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 40%;
+        right: 20px;
+    };
 }
 .submit {
     width: 320px;
@@ -74,7 +87,6 @@ select {
     margin-bottom: 30px;
 }
 .guests {
-    position: relative;
     ::after {
         height: 5px;
         width: 5px;
@@ -87,4 +99,31 @@ select {
         top: 40%;
         right: 50px;
     }
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    width: 30px;
+    height: 30px;
+}
+.arrival {
+    ::after {
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 40%;
+        right: 20px;
+    }
+}
+.arrow {
+    position: relative;
+    top: 10px;
+    left: -35px;
+    height: 20px;
+    // top:447px;
+    // left: 470px;
 }

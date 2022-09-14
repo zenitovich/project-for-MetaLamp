@@ -22,7 +22,7 @@
         }
     };
     .subscribe  {
-        margin-right: 100px;
+        margin-right: 10%;
         margin-top: 104px;
         font-size: 12px;
         text-transform: uppercase;
@@ -86,4 +86,24 @@
             }
         }
     }
+}
+.email-arrow {
+    position: relative;
+    top:-35px;
+    left: 225px;
+    height: 30px;
+    width: 30px;
+    background: url(../../img/arrow_forward_violet.png) no-repeat center;
+    border: none;
+}
+.email {
+    margin-top: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    padding-left: 15px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    width: 260px;
 }
