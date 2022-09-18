@@ -1,3 +1,5 @@
+
+// Отступов не хватает должно быть так: https://netology-university.bitbucket.io/codestyle/css/ посмотри все, тут много чего исправить можно 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 main {
     background: url("../../img/image_3.png") center center no-repeat;
@@ -5,6 +7,8 @@ main {
     min-height: 125%;
     min-width: 100%;
     .number-selection {
+        // вот тут траблы. Посмотри в фигме - там есть расстояния до края. их в первую очередь надо прописать через паддинги padding: 40px 30px 30px 30px
+        // и тебе не нужна тут ширина, скорее всего, у тебя есть паддинг, а остальное формируется от внутренних элементов
         display: flex;
         flex-wrap: wrap;
         height: 374px;
@@ -24,6 +28,7 @@ main {
             margin-left: 30px;
             margin-right: 30px;
             font-size: 24px;
+            // после того как поставишь паддинги, это надо убрать
             margin-top: 10%;
             margin-bottom: -20px;
         }
@@ -45,6 +50,8 @@ main {
 }
 .arrival, .guests, .departure {
     position: relative;
+    // left margin только у правого оставить
+    // а на самом деле надо вот эти два инпута рядом обернуть в div и сделать flex и justify-content: space-between а не маргинами
     margin-left: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -84,6 +91,7 @@ select {
     margin-right: 30px;
 }
 .number-selection__submit {
+    // тут тоже слева маргин убрать из-за паддинга
     height: 44px;
     width: 320px;
     font-family: 'Montserrat';

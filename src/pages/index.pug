@@ -1,5 +1,7 @@
 extends ../layout/default.pug
+//- Тут ты написал block title но не использовал, надо написать title и тут твой тайтл
 block title
+//- блок скрипт вообще не используется, можно убрать
 block scripts
 block content 
     main
@@ -7,13 +9,16 @@ block content
             h1 Найдём номера под ваши пожелания
             form(action="#" method="POST" class="number-selection__form") 
                 .arrival Прибытие
+                    //- почему тут <input> из html? это же паг, нужно input просто, см доку
                     .arrival__select <input type="date" class="date">
                 .departure Выезд
+                    //- тоже самое
                     .departure__select <input type="date" class="date">
                 .guests Гости
                     .guests__select
                         select
                             option="Сколько гостей"
+                //- тоже самое
                 <input type="submit" class="number-selection__submit" value="Подобрать номер">
                     img(src="../img/arrow_forward.png" alt="Стрелка вправо" class="arrow")
         .slogan Лучшие номера для вашей работы, отдыха, и просто вдохновения
