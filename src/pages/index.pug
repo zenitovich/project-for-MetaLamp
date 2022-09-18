@@ -3,16 +3,18 @@ block title
 block scripts
 block content 
     main
-        .number_selection 
+        .number-selection 
             h1 Найдём номера под ваши пожелания
-            .arrival Прибытие
-                .select <input type="date" class="date">
-            .departure Выезд
-                .select <input type="date" class="date">
-            .guests Гости
-                .select
-                    select
-                        option="Сколько гостей"
-            <input type="submit" class="submit" value="Подобрать номер">
-                img(src="../img/arrow_forward.png" alt="Стрелка вправо" class="arrow")
+            form(action="#" method="POST" class="number-selection__form") 
+                .arrival Прибытие
+                    .arrival__select <input type="date" class="date">
+                .departure Выезд
+                    .departure__select <input type="date" class="date">
+                .guests Гости
+                    .guests__select
+                        select
+                            option="Сколько гостей"
+                <input type="submit" class="number-selection__submit" value="Подобрать номер">
+                    img(src="../img/arrow_forward.png" alt="Стрелка вправо" class="arrow")
+        .slogan Лучшие номера для вашей работы, отдыха, и просто вдохновения
             
