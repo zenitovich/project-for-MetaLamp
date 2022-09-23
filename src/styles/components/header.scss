@@ -50,17 +50,17 @@
 
   li.list-item.dropdown{
     position: relative;
-    margin-right: 30px;
+    margin-right: 42px;
     ::after {
-      height: 5px;
-      width: 5px;
+      height: 7px;
+      width: 7px;
       position: absolute;
       content: '';
       border: 2px solid rgba(31, 32, 65, 0.5);
       border-top: none;
       border-left: none;
       transform: rotate(45deg);
-      top: 25%;
-      right: -10px;
+      top: 20%;
+      right: -15px;
     }
   }

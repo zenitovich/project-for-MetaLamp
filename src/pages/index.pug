@@ -1,18 +1,18 @@
 extends ../layout/default.pug
 block title
     title Toxin hotel
+block scripts
 block content 
     main
         .number-selection 
             form(action="#" method="POST" class="number-selection__form")
                 h1 Найдём номера под ваши пожелания
                 .inputs
-                    .arrival Прибытие
-                        .arrival__select 
-                            input(type="date" class="date")
-                    .departure Выезд
-                        .departure__select
-                            input(type="date" class="date")
+                    .air-datepicker-global-container
+                    label.arrival Прибытие
+                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="arrival")
+                    label.departure Выезд
+                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="departure")
                 .guests Гости
                     .guests__select
                         select

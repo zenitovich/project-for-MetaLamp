@@ -33,6 +33,7 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
+    "air-datepicker": "^3.3.0",
     "html-webpack-pug-plugin": "^4.0.0"
   }
 }
