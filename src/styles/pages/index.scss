@@ -47,18 +47,6 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 12px;
-    ::after {
-        height: 7px;
-        width: 7px;
-        position: absolute;
-        content: '';
-        border: 2px solid rgba(31, 32, 65, 0.5);
-        border-top: none;
-        border-left: none;
-        transform: rotate(45deg);
-        top: 60%;
-        right: 20px;
-    }
 }
 
 .arrival, .departure {
@@ -67,18 +55,6 @@ main {
     font-size: 12px;
 }
 
-select {
-    margin-top: 5px;
-    font-size: 14px;
-    padding: 13px 15px;
-    width: 100%;
-    color:  rgba(31, 32, 65, 0.75);;
-    font-family: 'Montserrat';
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    appearance: none;
-    position: relative;
-}
 .number-selection__submit {
     height: 44px;
     width: 100%;
@@ -190,4 +166,3 @@ select {
     .air-datepicker-cell.-selected-.-current- {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     }
-    

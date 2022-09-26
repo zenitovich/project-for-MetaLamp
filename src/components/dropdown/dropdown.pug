@@ -1,1 +1,22 @@
-mixin dropdown(label, value, first, second, third, selector)
+mixin dropdown(label, value)
+    .guests(data-type=selector)=label
+        ul.guests-list
+            li.number-of-guests=value
+            li.parents Взрослые
+                .number-of-type 
+                    span.sym -
+                    span 2
+                    span.sym.plus +
+            li.children Дети
+                .number-of-type
+                    span.sym -
+                    span 1
+                    span.sym.plus + 
+            li.mini-children Младенцы
+                .number-of-type
+                    span.sym -
+                    span 0
+                    span.sym.plus +
+            li.submits 
+                input(type="submit" value="очистить" class="guest-list__submit")
+                input(type="submit" value="применить" class="guest-list__submit")

@@ -2,7 +2,8 @@ extends ../layout/default.pug
 block title
     title Toxin hotel
 block scripts
-block content 
+block content
+    include ../components/dropdown/dropdown.pug
     main
         .number-selection 
             form(action="#" method="POST" class="number-selection__form")
@@ -13,12 +14,11 @@ block content
                         input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="arrival")
                     label.departure Выезд
                         input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="departure")
-                .guests Гости
-                    .guests__select
-                        select
-                            option="Сколько гостей"
+                .guests-dropdown 
+                    +dropdown('Гости', 'Сколько гостей')
                 .button-numbers
                     input(type="submit" class="number-selection__submit" value="Подобрать номер")
                     img(src="../img/arrow_forward.svg" alt="Стрелка вправо" class="arrow")
+
         .slogan Лучшие номера для вашей работы, отдыха, и просто вдохновения
             
