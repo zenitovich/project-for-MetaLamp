@@ -40,15 +40,6 @@ main {
     margin-top: 5px;
 }
 
-.guests{
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
 .arrival, .departure {
     font-weight: bold;
     text-transform: uppercase;
@@ -74,8 +65,7 @@ main {
     height: 20px;
 }
 .slogan {
-    width: 297px;
-    height: 48px;
+    width: 20%;
     font-family: 'Montserrat';
     color: rgba(31, 32, 65, 0.75);
     font-size: 14px;
@@ -85,13 +75,13 @@ main {
     top: 125%;
     right: 10%;
 }
-.inputs {
+.number-selection__inputs {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
 }
-.button-numbers {
+.number-selection__button-numbers {
     position: relative;
     width: 100%;
     margin-top: 30px;

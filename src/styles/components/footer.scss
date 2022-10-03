@@ -14,7 +14,7 @@
         margin-top: 100px;
         margin-left: 10%;
         color: rgba(31, 32, 65, 0.5);
-        .description {
+        .hotel__description {
             margin-top: 20px;
             width: 260px;
             color: rgba(31, 32, 65, 0.75);
@@ -28,14 +28,14 @@
         text-transform: uppercase;
         font-weight: bold;
         width: 260px;
-        .description {
+        .subscribe__description {
             font-size: 14px;
             text-transform: none;
             font-weight: normal;
             margin-top: 20px;
         }
     };
-    ul {
+    ul.footer__list {
         margin-top: 104px;
         white-space: nowrap;
         font-weight: bold;

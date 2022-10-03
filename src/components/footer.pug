@@ -1,29 +1,29 @@
 footer
     .footer1
         .hotel 
-            .logo
+            .hotel__logo
                 img(src="../img/Logo.svg" alt="Лого")
-            .description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"
+            .hotel__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации "Отельные взгляды"
 
-        ul.navigation  Навигация
+        ul.footer__list.navigation  Навигация
             li.list-item: a(href="#").link-item О нас
             li.list-item: a(href="#").link-item Новости
             li.list-item: a(href="#").link-item Служба поддержки
             li.list-item: a(href="#").link-item Услуги
                 
-        ul.about О нас
+        ul.footer__list.about О нас
             li.list-item: a(href="#").link-item О сервисе
             li.list-item: a(href="#").link-item Наша команда
             li.list-item: a(href="#").link-item Вакансии
             li.list-item: a(href="#").link-item Инвесторы
 
-        ul.support Служба поддержки
+        ul.footer__list.support Служба поддержки
             li.list-item: a(href="#").link-item Соглашения
             li.list-item: a(href="#").link-item Сообщества
             li.list-item: a(href="#").link-item Связь с нами
 
         .subscribe Подписка
-            .description Получайте специальные предложения и новости сервиса
+            .subscribe__description Получайте специальные предложения и новости сервиса
             form(action="#" method="POST") 
                 <input type="email" placeholder="Email" class="email">
                 <input type="submit" value="" class="email-arrow">
@@ -31,7 +31,7 @@ footer
     .footer2
         .copyright Copyright © 2018 Toxin отель. Все права защищены
         .social 
-            ul.social-list 
+            ul.social__list 
                 li.list-item: a(href="https://www.twitter.com/").link-item: img(src="../img/twitter.svg" alt="Twitter")
                 li.list-item: a(href="https://www.facebook.com/").link-item: img(src="../img/facebook.svg" alt="Facebook")
                 li.list-item: a(href="https://www.instagram.com/").link-item: img(src="../img/instagram.svg" alt="Instagram")

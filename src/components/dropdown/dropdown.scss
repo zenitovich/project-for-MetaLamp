@@ -1,4 +1,13 @@
-ul.guests-list {
+.mixin__dropdown {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.dropbtn {
     background: #FFFFFF;
     margin-top: 5px;
     font-size: 14px;
@@ -8,50 +17,44 @@ ul.guests-list {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-radius: 4px;
     position: relative;
-    padding: 0;
-    li {
-        list-style-type: none;
-        padding-top: 7px;
-        padding-right: 7px;
-        padding-left: 15px;
-        font-family: 'Montserrat';
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #1F2041;
-        font-size: 12px;
-        line-height: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .number-of-type {
-            width: 85px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            span.sym {
-                position: relative;
-                font-size: 18px;
-                font-weight: normal;
-                color: rgba(31, 32, 65, 0.5);
-                border: 1px solid rgba(31, 32, 65, 0.5);
-                border-radius: 50%;
-                padding: 5px 9px;
-            }
-            span.sym.plus {
-                padding: 5px 7px;
-            }
-        }
-    };
-    li.number-of-guests {
-        text-transform: none;
-        font-weight: normal;
-        border-bottom: 1px solid rgba(31, 32, 65, 0.5);
-        font-size: 14px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
+    padding: 12px 15px;
+    text-align: start;
 }
-.guest-list__submit {
+.value-of-mixin {
+    background: #FFFFFF;
+    font-size: 14px;
+    color:  rgba(31, 32, 65, 0.75);
+    font-family: 'Montserrat';
+    padding: 12px 15px;
+    font-weight: 400;
+    text-transform: none;
+    border-top: 1px solid white;
+    border-radius: 4px;
+}
+.dropdown-content {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 19px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 4px;
+}
+.mixin__dropdown:hover .dropdown-content {
+    display: block;
+}
+.first, .second, .third {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 7px 7px 15px;
+}
+.first {
+    border-top: 1px solid rgba(31, 32, 65, 0.5);
+}
+.dropdown-content__submit {
     font-family: 'Montserrat';
     border: none;
     background-color: #FFFFFF;
@@ -61,4 +64,26 @@ ul.guests-list {
     color: #BC9CFF;
     padding: 0;
     margin: 13px 0;
+}
+.submits {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+button.sym {
+    font-weight: normal;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color:rgba(31, 32, 65, 0.5);
+}
+
+.value-selector {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

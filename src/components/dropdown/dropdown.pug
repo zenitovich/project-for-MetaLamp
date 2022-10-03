@@ -1,22 +1,23 @@
-mixin dropdown(label, value)
-    .guests(data-type=selector)=label
-        ul.guests-list
-            li.number-of-guests=value
-            li.parents Взрослые
-                .number-of-type 
-                    span.sym -
-                    span 2
-                    span.sym.plus +
-            li.children Дети
-                .number-of-type
-                    span.sym -
-                    span 1
-                    span.sym.plus + 
-            li.mini-children Младенцы
-                .number-of-type
-                    span.sym -
-                    span 0
-                    span.sym.plus +
-            li.submits 
-                input(type="submit" value="очистить" class="guest-list__submit")
-                input(type="submit" value="применить" class="guest-list__submit")
+mixin dropdown(label, value, first, second, third, selector)
+    .mixin__dropdown(data-type=selector)=label
+        button(class="dropbtn" id="dropbtn")=value
+        .dropdown-content
+            .value-of-mixin(id="value-of-mixin")=0
+            .first=first
+                .value-selector
+                    button.sym(id="minus-first") -
+                    span.value-of-sym(id="numberPlace-first") 0
+                    button.sym(id="plus-first") +
+            .second=second
+                .value-selector
+                    button.sym(id="minus-second") -
+                    span.value-of-sym(id="numberPlace-second") 0
+                    button.sym(id="plus-second") +
+            .third=third
+                .value-selector
+                    button.sym(id="minus-third") -
+                    span.value-of-sym(id="numberPlace-third") 0
+                    button.sym(id="plus-third") +
+            .submits 
+                input(type="submit" value="очистить" class="dropdown-content__submit" id="clean")
+                input(type="submit" value="применить" class="dropdown-content__submit" id="enter")
