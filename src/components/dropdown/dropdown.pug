@@ -21,3 +21,8 @@ mixin dropdown(label, value, first, second, third, selector)
             .submits 
                 input(type="submit" value="очистить" class="dropdown-content__submit" id="clean")
                 input(type="submit" value="применить" class="dropdown-content__submit" id="enter")
+
+        //-у тебя сам выпадающий список реализован через див и кнопку button. Но лучше сделать через label и input
+        //- список у тебя выпадает через ховер, нужно чтобы по нажатию это было. Можно просто через js при клике с none на block менять.
+        //- кнопки лучше индивидуализировать через дата атрибуты
+        
