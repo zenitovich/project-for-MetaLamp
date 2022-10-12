@@ -6,6 +6,20 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 12px;
+    position: relative;
+    &:after {
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 57%;
+        left: 92.5%;
+        z-index: 2;
+    }
 }
 .dropbtn {
     background: #FFFFFF;
@@ -64,6 +78,7 @@
     color: #BC9CFF;
     padding: 0;
     margin: 13px 0;
+    cursor: pointer;
 }
 .submits {
     display: flex;
@@ -79,6 +94,7 @@ button.sym {
     width: 30px;
     height: 30px;
     color:rgba(31, 32, 65, 0.5);
+    cursor: pointer;
 }
 
 .value-selector {

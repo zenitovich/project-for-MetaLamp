@@ -9,11 +9,14 @@
     align-items: center;
     font-family: "Montserrat", sans-serif;
     margin: 0 auto;
-    .header__logo {
-      margin-left: 10%;
-    }
+    padding: 0 10%;
+    @media (max-width: 1300px) {
+      padding: 0 5%;
+    };
+    @media (max-width: 1000px) {
+      padding: 0;
+    };
     ul {
-      margin-right: 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -38,13 +41,14 @@
     text-transform: uppercase;
     background-color: #ffffff;
     border: 2px solid #bc9cff;
+    cursor: pointer;
     a {
       color: #bc9cff;
     }
   }
   button.reg {
     border: 2px solid #bc9cff;
-    background-color: #bc9cff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     a {
       color: #ffffff;
     }

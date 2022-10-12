@@ -62,7 +62,7 @@ window.onload=function(){
       if(number3<max3){
           number3 = number3+1;
           numberPlace3.innerText = number3 ;
-          valueOfMixin.innerText = number3+number2+number+' гостей';
+          valueOfMixin.innerText = number3+number2+number;
       }     
   }
   var enter = document.getElementById("enter")

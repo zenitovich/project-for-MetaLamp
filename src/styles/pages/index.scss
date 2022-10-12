@@ -44,6 +44,20 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 12px;
+    position: relative;
+    &:after {
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 57%;
+        left: 125px;
+        z-index: 2;
+    }
 }
 
 .number-selection__submit {
@@ -57,6 +71,7 @@ main {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
     border: 0px;
+    cursor: pointer;
 }
 .arrow {
     position: absolute;
@@ -72,7 +87,7 @@ main {
     text-align: right;
     line-height: 24px;
     position: absolute;
-    top: 125%;
+    top: 135%;
     right: 10%;
 }
 .number-selection__inputs {
@@ -86,6 +101,7 @@ main {
     width: 100%;
     margin-top: 30px;
 }
+
 .air-datepicker-cell.-selected- {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 50%;
