@@ -22,9 +22,10 @@ footer
             li.list-item: a(href="#").link-item Сообщества
             li.list-item: a(href="#").link-item Связь с нами
 
-        .subscribe Подписка
-            .subscribe__description Получайте специальные предложения и новости сервиса
-            form(action="#" method="POST") 
+        ul.footer__list.subscribe Подписка
+            li.list-item.subscribe__description Получайте специальные предложения и новости сервиса
+            li.list-item
+                form(action="#" method="POST") 
                 <input type="email" placeholder="Email" class="email">
                 <input type="submit" value="" class="email-arrow">
 
@@ -34,7 +35,4 @@ footer
             ul.social__list 
                 li.list-item: a(href="https://www.twitter.com/").link-item: img(src="../img/twitter.svg" alt="Twitter")
                 li.list-item: a(href="https://www.facebook.com/").link-item: img(src="../img/facebook.svg" alt="Facebook")
-                li.list-item: a(href="https://www.instagram.com/").link-item: img(src="../img/instagram.svg" alt="Instagram")
-        
-        //- текст Copyright © 2018 Toxin отель. Все права защищены - не тот шрифт или прозрачность
-        //- footer1,2
+                li.list-item: a(href="https://www.google.ru/").link-item: img(src="../img/instagram.svg" alt="Instagram")

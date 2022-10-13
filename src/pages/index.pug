@@ -4,9 +4,9 @@ block title
 block scripts
 block content
     include ../components/dropdown/dropdown.pug
-    main.main
+    .main
         .number-selection 
-            form(action="#" method="GET" class="number-selection__form")
+            form(action="#" class="number-selection__form")
                 h1 Найдём номера под ваши пожелания
                 .number-selection__inputs
                     .air-datepicker-global-container
@@ -17,10 +17,11 @@ block content
                 .number-selection__guests 
                     +dropdown('Гости', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'guests')
                 .number-selection__button-numbers
-                    input(type="submit" class="number-selection__submit" value="Подобрать номер")
-                    img(src="../img/arrow_forward.svg" alt="Стрелка вправо" class="arrow")
+                    a(href="./numbers.html")
+                        input(type="submit" class="number-selection__submit" value="Подобрать номер")
+                        img(src="../img/arrow_forward.svg" alt="Стрелка вправо" class="arrow")
 
-        .slogan Лучшие номера для вашей работы, отдыха, и просто вдохновения
+        p.slogan Лучшие номера для вашей работы, отдыха, и просто вдохновения
 
         //- класс slogan такой себе, и его позиционирование не такое. Он чуть ближе к краю.
         //- цвет у слов прибытие и выезд черный а там чуть другой

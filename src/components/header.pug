@@ -3,20 +3,14 @@ header.header
         img(src="../img/Logo.svg" alt="Лого")
             
     ul.header__list 
-        li.list-item: a(href="#").link-item  О нас
-        li.list-item.dropdown: a(href="#").link-item Услуги
-        li.list-item: a(href="#").link-item Вакансии
-        li.list-item: a(href="#").link-item Новости
-        li.list-item.dropdown: a(href="#").link-item Соглашения
+        li.list-item.qw: a(href="#").link-item  О нас
+        li.list-item.qw.dropdown: a(href="#").link-item Услуги
+        li.list-item.qw: a(href="#").link-item Вакансии
+        li.list-item.qw: a(href="#").link-item Новости
+        li.list-item.qw.dropdown: a(href="#").link-item Соглашения
         li.list-item.button
           button.in
             a(href="#") Войти
         li.list-item.button
           button.reg 
             a(href="#") Зарегистрироваться
-            
-        //- шрифт какой то не тот у кнопок и градиента нет
-        //- курсор появляется только при наведении на текст кнопки, должен на саму кнопку
-        //- измени отступ от логотипа, там не должно быть отступа вообще. Сделай это все через флекс,
-        //- и они будут сужаться по краям сами, а потом уже нужно делать адаптив, начиная с ширины 1100px
-        //- в футере соответственно тоже самое.
