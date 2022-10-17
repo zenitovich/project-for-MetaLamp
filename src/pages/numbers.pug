@@ -3,5 +3,40 @@ block title
     title numbers
 block scripts
 block content
-    .main 
-        p Рома лох
+    include ../components/dropdown/dropdown.pug
+    .main-numbers
+        .numbers-container 
+            .air-datepicker-global-container
+            label.dates.numbers-container-name Даты пребывания в отеле
+                    input(type="text" class="dates__input" placeholder="19 - 23 августа" id="dates")
+            .guests
+                +dropdown('Гости', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'guests')
+            .price-range
+                .numbers-container-name Диапазон цены
+                .price-range-value 5000-10000Р
+                .price-range-visual
+                    .price-range-visual--green
+                .price-range-description Стоимость за сутки пребывания в номере
+            .house-rules
+                .numbers-container-name Правила дома
+                .house-rules__checkbox Можно курить
+                .house-rules__checkbox-checked Можно с питомцами
+                .house-rules__checkbox-checked Можно пригласить гостей (до 10 человек)
+            .availability
+                .numbers-container-name Доступность
+                .availability__checkbox Широкий коридор
+                    .availability__checkbox__description Ширина коридоров в номере не менее 91 см.
+                .availability__checkbox Помощник для инвалидов
+                    .availability__checkbox__description На 1 этаже вас встретит специалист и проводит до номера.
+            .room-comfort
+                +dropdown('Удобства номера', '2 спальни, 2 кровати', 'Спальни', 'Кровати', 'Ванные комнаты', 'room-comfort')
+            .added-comfort
+                .numbers-container-name Дополнительные удобства
+                .added-comfort__checkbox Завтрак
+                .added-comfort__checkbox-checked Письменный стол 
+                .added-comfort__checkbox-checked Стул для кормления
+                .added-comfort__checkbox-checked Кроватка
+                .added-comfort__checkbox Телевизор
+                .added-comfort__checkbox Шампунь
+        .selection-of-rooms 
+            h1 Номера, которые мы для вас подобрали

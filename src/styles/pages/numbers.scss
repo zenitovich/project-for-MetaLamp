@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.main-numbers {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.numbers-container {
+    max-width: 266px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    .numbers-container-name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1F2041;
+        margin-top: 30px;
+    }
+}
+.dates__input {
+    color:  rgba(31, 32, 65, 0.75);
+    font-family: 'Montserrat';
+    font-size: 14px;
+    width: 100%;
+    padding-left: 15px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 12px 15px;
+    position: relative;
+}
+.dates {
+    position: relative;
+    &:after {
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 57%;
+        left: 92.5%;
+        z-index: 2;
+    }
+}
+.price-range {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .price-range-value {
+        margin-top: 30px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: rgba(31, 32, 65, 0.5);
+    };
+    .price-range-description {
+        font-size: 12px;
+        color: rgba(31, 32, 65, 0.5);
+    };
+    .price-range-visual {
+        width: 100%;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 3px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        height: 4px;
+        background: #FFFF;
+        position: relative;
+        &:after {
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            content: '';
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            z-index: 2;
+            top: -5px;
+            left: 60%;
+        }
+        &:before {
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            content: '';
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            z-index: 2;
+            top: -5px;
+            left: 25%;
+        }
+        .price-range-visual--green {
+            position: absolute;
+            width: 33%;
+            height: 6px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 3px;
+            border: 1px solid white;
+            left: 30%;
+            top: -2px;
+        }
+    }
+}

@@ -5,3 +5,5 @@ import "air-datepicker/air-datepicker.css";
 import "./pages/scripts/index.js"
 import "./components/dropdown/dropdown.js"
 import "./components/dropdown/dropdown.scss"
+import "./styles/pages/numbers.scss"
+import "./pages/scripts/numbers.js"

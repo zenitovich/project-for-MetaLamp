@@ -20,4 +20,7 @@ let button = {
     new AirDatepicker("#data-registration", {
     buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
     }); 
-    console.log('Den molodec')
+
+    new AirDatepicker("#dates", {
+    buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
+    });
