@@ -1,0 +1,6 @@
+mixin checkbox(title,key,secondLabel)
+    .contain-for-checkbox
+        input(type="checkbox" class="custom-checkbox" id="cb_"+key)
+        label.label-for-checkbox(for="cb_"+key)=title
+        if secondLabel
+            .lalala=secondLabel
