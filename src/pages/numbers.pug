@@ -31,15 +31,10 @@ block content
             .room-comfort
                 +dropdown('Удобства номера', '2 спальни, 2 кровати', 'Спальни', 'Кровати', 'Ванные комнаты', 'room-comfort')
             .added-comfort
-                .numbers-container-name.additional-amenities Дополнительные удобства
-                    .numbers-container-name__select
+                .numbers-container-name.additional-amenities(id="addAm") Дополнительные удобства
+                    .down-arrow(id="downArrow")
+                    .numbers-container-name__select(id="numContNamSel")
                         each item, key in list2 
-                            +checkbox(item,key)
-        //-         .added-comfort__checkbox Завтрак
-        //-         .added-comfort__checkbox-checked Письменный стол 
-        //-         .added-comfort__checkbox-checked Стул для кормления
-        //-         .added-comfort__checkbox-checked Кроватка
-        //-         .added-comfort__checkbox Телевизор
-        //-         .added-comfort__checkbox Шампунь
-        //- .selection-of-rooms 
-        //-     h1 Номера, которые мы для вас подобрали
+                            +checkbox(item, key + 100)
+        .selection-of-rooms 
+            h1 Номера, которые мы для вас подобрали

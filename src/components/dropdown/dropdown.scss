@@ -7,6 +7,8 @@
     text-transform: uppercase;
     font-size: 12px;
     position: relative;
+    z-index: 3;
+    cursor: pointer;
     &:after {
         height: 7px;
         width: 7px;

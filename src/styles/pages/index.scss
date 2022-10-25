@@ -43,6 +43,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .arrival, .departure {
@@ -135,6 +136,7 @@
     }
     
     .air-datepicker {
+        cursor: pointer;
     —adp-width: 320px;
     —adp-day-cell-height: 45px;
     }

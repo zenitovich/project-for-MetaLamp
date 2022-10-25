@@ -1,6 +1,6 @@
 mixin checkbox(title,key,secondLabel)
     .contain-for-checkbox
         input(type="checkbox" class="custom-checkbox" id="cb_"+key)
-        label.label-for-checkbox(for="cb_"+key)=title
+        label.label-for-checkbox(for="cb_"+key class=secondLabel ? 'label-for-checkbox--bold' : '')=title
         if secondLabel
-            .lalala=secondLabel
+            span.secondLabel=secondLabel
