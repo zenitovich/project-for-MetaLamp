@@ -48,30 +48,67 @@ allDropdowns.forEach(dropdown => {
         updateCount()
     })
 
+    clean.addEventListener('click', () => {
+        numbers = numbers2 = numbers3 = 0
+        numbersCount.innerText = numbersCount2.innerText = numbersCount3.innerText = 0
+        updateCount()
+    })
 
     function updateCount () {
-        const allCount = numbers + numbers2 + numbers3
-        if (allCount>1 & allCount<5) {
-            inputValue.innerText = allCount + ' гостя'
-        }
-        else  if (allCount===1) {
-            inputValue.innerText = allCount + ' гость'
+        const allCount = numbers + numbers2 + numbers3 
+        if (dropdown.dataset.type === 'guests') {
+            if (allCount > 1 && allCount < 5) {
+                inputValue.innerText = allCount + ' гостя'
+                dropbtn.innerText = allCount + ' гостя'
+            }
+            else  if (allCount === 1) {
+                inputValue.innerText = allCount + ' гость'
+                dropbtn.innerText = allCount + ' гость'
+            }
+            else {
+                inputValue.innerText = allCount + ' гостей'
+                dropbtn.innerText = allCount + ' гостей'
+            }
         }
         else {
-            inputValue.innerText = allCount + ' гостей'
+            if (!numbers && !numbers2 && !numbers3) {
+                dropbtn.innerText = 'default'
+                inputValue.innerText = 'default'
+                return
+            }
+
+            let str = ''
+
+            if (numbers) {
+                str = numbers + ' спальни'
+            }
+
+            if (numbers2) {
+                str = str + numbers2 + ' кровати'
+            }
+
+            if (numbers3) {
+                str = str + numbers3 + ' ванные комнаты'
+            }
+            
+            inputValue.innerText = str
+            dropbtn.innerText = str
         }
     }
 
 
-      enter.onclick = function() {
-        if(enter.onclick) {
-            dropbtn.innerText = inputValue.innerText
-        }
-        if(clean.onclick) {
+    //   enter.onclick = function() {
+    //     if(enter.onclick) {
+    //         
+    //     }
+    //     if(clean.onclick) {
             
-                }
-      }
+    //             }
+    //   }
 })
+
+
+
 
 
 //   const minusBtn = document.getElementById("minus-first"),
