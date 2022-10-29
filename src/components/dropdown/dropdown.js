@@ -72,23 +72,76 @@ allDropdowns.forEach(dropdown => {
         }
         else {
             if (!numbers && !numbers2 && !numbers3) {
-                dropbtn.innerText = 'default'
-                inputValue.innerText = 'default'
+                dropbtn.innerText = '2 спальни, 2 кровати...'
+                inputValue.innerText = '2 спальни, 2 кровати...'
                 return
             }
 
             let str = ''
 
             if (numbers) {
-                str = numbers + ' спальни'
+
+                if (numbers === 1) {
+                    str = numbers + ' спальня'
+                }
+                else if (numbers > 1 && numbers < 5) {
+                    str= numbers + ' спальни'
+                }
+                else {
+                    str = numbers + ' спален'
+                }
             }
 
             if (numbers2) {
-                str = str + numbers2 + ' кровати'
+
+                if (numbers) {
+                    if (numbers2 === 1) {
+                        str = str + ', ' + numbers2 + ' кровать'
+                    }
+                    else if (numbers2 > 1 && numbers2 < 5) {
+                        str= str + ', ' + numbers2 + ' кровати'
+                    }
+                    else {
+                        str = str + ', ' + numbers2 + ' кроватей'
+                    }
+                }
+                else {
+                    if (numbers2 === 1) {
+                        str = str + numbers2 + ' кровать'
+                    }
+                    else if (numbers2 > 1 && numbers2 < 5) {
+                        str= str + numbers2 + ' кровати'
+                    }
+                    else {
+                        str = str + numbers2 + ' кроватей'
+                    }
+                }
             }
 
             if (numbers3) {
-                str = str + numbers3 + ' ванные комнаты'
+
+                if (numbers2) {
+                    if (numbers3 === 1) {
+                        str = str + ', ' + numbers3 + ' ванная комната'
+                    }
+                    else if (numbers3 > 1 && numbers3 < 5) {
+                        str= str + ', ' + numbers3 + ' ванные комнаты'
+                    }
+                    else {
+                        str = str + ', ' + numbers3 + ' ванных комнат'
+                    }
+                }
+                else {
+                    if (numbers3 === 1) {
+                        str = str + numbers3 + ' ванная комната'
+                    }
+                    else if (numbers3 > 1 && numbers3 < 5) {
+                        str= str + numbers3 + ' ванные комнаты'
+                    }
+                    else {
+                        str = str + numbers3 + ' ванных комнат'
+                    }
+                }
             }
             
             inputValue.innerText = str
