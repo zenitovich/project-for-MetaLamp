@@ -5,6 +5,7 @@ block scripts
 block content
     include ../components/dropdown/dropdown.pug
     include ../components/checkbox/checkbox.pug
+    include ../components/card/card.pug
     -var list=["Можно курить","Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
     -var list2=["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
     .main-numbers
@@ -37,4 +38,6 @@ block content
                         each item, key in list2 
                             +checkbox(item, key + 100)
         .selection-of-rooms 
-            h1 Номера, которые мы для вас подобрали
+            h2 Номера, которые мы для вас подобрали
+            .cards 
+                +card("../img/number1.svg", '№ 888', '9 990', 5, '145', 'lux')

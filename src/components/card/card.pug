@@ -1,0 +1,27 @@
+mixin card(image, number, price, stars, reviews, lux)
+    .card 
+        .card__image
+            img(src=image)
+            .card__arrrow--left
+                img(src="../img/card__arrrow--left.svg")
+            .card__arrrow--right
+                img(src="../img/card__arrrow--right.svg")
+            .card__ellipse-pagination
+                img(src="../img/card__ellipse-pagination.svg")
+        .card__stats
+            .card__number=number
+            if lux
+                .card__lux ЛЮКС
+            .card__price=price+'Р'
+                .card__price--text &nbsp в сутки
+            if stars===5
+                .card__stars
+                    img(src="../img/5-stars.svg")
+            if stars===4
+                .card__stars
+                    img(src="../img/4-stars.svg")
+            if stars===3
+                .card__stars
+                    img(src="../img/3-stars.svg")
+            .card__reviews=reviews
+                .card__reviews--text &nbsp Отзывов
