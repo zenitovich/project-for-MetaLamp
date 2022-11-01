@@ -4,12 +4,14 @@
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
+    // flex-wrap: wrap;
 }
 .numbers-container {
     max-width: 266px;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat';
+    min-width: 266px;
     .numbers-container-name {
         font-style: normal;
         font-weight: 700;
@@ -144,4 +146,51 @@
 }
 .hidden {
     display: none;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards-description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1F2041;
+    margin-top: 30px;
+}
+.selection-of-rooms {
+    margin-left: 60px;
+}
+.pagination__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    &--item {
+        // padding-left: 40px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgba(31, 32, 65, 0.5);
+        margin-right: 30px;
+        &:first-of-type {
+            margin-right: 15px;
+        }
+    }
+    &--item-checked {
+        color: #FFFFFF;
+        font-weight: bold;
+        border: 1px solid linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+        padding: 0px 18px;
+    }
 }

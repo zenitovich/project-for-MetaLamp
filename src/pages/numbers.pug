@@ -8,6 +8,7 @@ block content
     include ../components/card/card.pug
     -var list=["Можно курить","Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
     -var list2=["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]
+    -var cardList=[{image:"../img/number1.svg", number:"888", price:"9990", stars:5, reviews: "145", lux: "lux"},{image:'../img/number-2.svg', number:'840', price: '9900', stars:4, reviews: '65'}, {image:'../img/number-3.svg', number:'980', price: '8500', stars:3, reviews: '35', lux: 'lux'}, {image:'../img/number-4.svg', number:'856', price: '7300', stars:5, reviews: '19'}, {image:'../img/number-5.svg', number:'740', price: '6000', stars:4, reviews: '44'}, {image:'../img/number-6.svg', number:'982', price: '5800', stars:3, reviews: '56'}, {image:'../img/number-7.svg', number:'678', price: '5500', stars:5, reviews: '45'}, {image:'../img/number-8.svg', number:'450', price: '5300', stars:4, reviews: '39'}, {image:'../img/number-9.svg', number:'350', price: '5000', stars:3, reviews: '77'}, {image:'../img/number-10.svg', number:'666', price: '5000', stars:5, reviews: '25'}, {image:'../img/number-11.svg', number:'444', price: '5000', stars:3, reviews: '15'}, {image:'../img/number-12.svg', number:'352', price: '5000', stars:3, reviews: '55'}]
     .main-numbers
         .numbers-container 
             .air-datepicker-global-container
@@ -38,6 +39,18 @@ block content
                         each item, key in list2 
                             +checkbox(item, key + 100)
         .selection-of-rooms 
-            h2 Номера, которые мы для вас подобрали
+            .cards-description Номера, которые мы для вас подобрали
             .cards 
-                +card("../img/number1.svg", '№ 888', '9 990', 5, '145', 'lux')
+                //- +card("../img/number1.svg", '№ 888', '9 990', 5, '145', 'lux')
+                each obj in cardList 
+                    +card(obj.image, obj.number, obj.price, obj.stars, obj.reviews, obj.lux)
+            .selection-of-rooms__pagination 
+                .pagination__list 
+                    .pagination__list--item.pagination__list--item-checked 1
+                    .pagination__list--item 2
+                    .pagination__list--item 3
+                    .pagination__list--item ...
+                    .pagination__list--item 15
+                    .pagination__list--arrow
+                        img(src="../img/pagination--arrow.svg")
+                .pagination__description

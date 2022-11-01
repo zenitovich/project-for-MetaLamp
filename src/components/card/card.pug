@@ -9,11 +9,13 @@ mixin card(image, number, price, stars, reviews, lux)
             .card__ellipse-pagination
                 img(src="../img/card__ellipse-pagination.svg")
         .card__stats
-            .card__number=number
+            .card__number='№'+number
             if lux
                 .card__lux ЛЮКС
             .card__price=price+'Р'
                 .card__price--text &nbsp в сутки
+            .card__border 
+                img(src="../img/card-border.svg")
             if stars===5
                 .card__stars
                     img(src="../img/5-stars.svg")

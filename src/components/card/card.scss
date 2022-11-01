@@ -7,8 +7,11 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
     align-items: center;
+    margin-right: 10px;
+    margin-top: 20px;
     &__image {
         position: relative;
+        cursor: pointer;
         .card__arrrow--left {
             position: absolute;
             top: 45%;
@@ -48,8 +51,6 @@
         line-height: 20px;
         text-transform: uppercase;
         color: #BC9CFF;
-        position: relative;
-        left: -12px;
     }
     &__price, &__reviews {
         display: flex;
@@ -65,7 +66,13 @@
     &__stars, &__reviews {
         margin-top: 18px;
     }
-    // &__reviews {
-    //     margin-top: 23px;
-    // }
+    &__border {
+        position: absolute;
+    }
+    .card__arrrow--left, .card__arrrow--right, .card__ellipse-pagination {
+        display: none;
+    }
+    .card__image:hover .card__arrrow--left, .card__image:hover .card__arrrow--right, .card__image:hover .card__ellipse-pagination {
+        display: block;
+    }
 }
