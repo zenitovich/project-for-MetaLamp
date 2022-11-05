@@ -1,1 +1,33 @@
 extends ../layout/default.pug
+block title
+    title number
+block scripts
+block content
+    .number-container 
+        .number-container__images
+            .number-container__images--big
+            .number-container__images--small
+                .number-container__images--small-one
+                .number-container__images--small-two
+        .number-container__description
+            .room-info
+                .number-block__title Сведения о номере
+                .room-info__comfort
+                    .room-info__comfort--img
+                        img(src="../img/comfort.svg")
+                    .room-info__comfort-text-block
+                        .room-info__comfort--text Комфорт
+                        .room-info__comfort--description Шумопоглащающие стены
+                .room-info__comfort
+                    .room-info__comfort--img
+                        img(src="../img/conveniens.svg")
+                    .room-info__comfort-text-block
+                        .room-info__comfort--text Удобство
+                        .room-info__comfort--description Окно в каждой из спален
+                .room-info__comfort
+                    .room-info__comfort--img
+                        img(src="../img/cosiness.svg")
+                    .room-info__comfort-text-block
+                        .room-info__comfort--text Уют
+                        .room-info__comfort--description Номер оснащён камином
+        .number-container__number-card
