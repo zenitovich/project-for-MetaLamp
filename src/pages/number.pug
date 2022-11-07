@@ -49,10 +49,10 @@ block content
                     .number-card__info--price <b>9 990Р</b> в сутки
                 .number-card__dates
                     .air-datepicker-global-container
-                    label.arrival Прибытие
-                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="arrival")
-                    label.departure Выезд
-                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="departure")
+                    label.arrival2 Прибытие
+                        input(type="text" class="date-registration2" placeholder="ДД.ММ.ГГГГ" id="arrival2")
+                    label.departure2 Выезд
+                        input(type="text" class="date-registration2" placeholder="ДД.ММ.ГГГГ" id="departure2")
                 .number-card__guests 
                     +dropdown('Гости', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'guests')
                 .number-card__add-info 
@@ -71,4 +71,9 @@ block content
                         .number-card__add-info-container--value 300Р
                 .number-card__price-value 
                     .number-card__price-value--text Итого
+                    .number-card__price-value--line 
+                        img(src="../img/price-dotted.svg")
                     .number-card__price-value--value 38 081Р
+                .number-card__button 
+                    input(type="button" class="number-card__button--button" value="Забронировать")
+                    img(src="../img/arrow_forward.svg" alt="Стрелка вправо" class="arrow")

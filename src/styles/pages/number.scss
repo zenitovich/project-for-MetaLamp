@@ -118,6 +118,14 @@
     justify-content: center;
 }
 
+.number-container__number-card {
+    padding: 40px 30px 30px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
 .number-card__info {
     display: flex;
     justify-content: space-between;
@@ -132,7 +140,9 @@
         font-size: 12px;
         text-transform: uppercase;
         color: #BC9CFF;
-        // margin-left: -30px;
+        position: relative;
+        left: -60px;
+        top: 3px;
     }
     &--price {
         color: rgba(31, 32, 65, 0.5);
@@ -141,6 +151,10 @@
 }
 .number-card__guests {
     font-family: 'Montserrat';
+}
+
+.number-card__add-info {
+    margin-top: 20px;
 }
 .number-card__add-info-container {
     display: flex;
@@ -171,4 +185,67 @@
     font-size: 19px;
     line-height: 23px;
     color: #1F2041;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.date-registration2 {
+    display: block;
+    color:  rgba(31, 32, 65, 0.75);;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 18px;
+    width: 150px;
+    height: 44px;
+    padding-left: 15px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.arrival2, .departure2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
+    &:after {
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        content: '';
+        border: 2px solid rgba(31, 32, 65, 0.5);
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        top: 57%;
+        left: 125px;
+        z-index: 2;
+    }
+}
+.number-card__dates {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.arrival2 {
+    margin-right: 20px;
+}
+.number-card__button {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    &--button{
+        height: 44px;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        text-transform: uppercase;
+        color:#FFFFFF;
+        font-size: 12px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        border: 0px;
+        cursor: pointer;
+    }
 }

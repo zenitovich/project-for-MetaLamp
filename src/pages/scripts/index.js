@@ -24,3 +24,11 @@ let button = {
     new AirDatepicker("#dates", {
     buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
     });
+
+    new AirDatepicker("#arrival2", {
+    buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
+    });
+
+    new AirDatepicker("#departure2", {
+    buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
+     });
