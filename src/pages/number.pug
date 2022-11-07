@@ -3,31 +3,55 @@ block title
     title number
 block scripts
 block content
+    include ../components/dropdown/dropdown.pug
     .number-container 
         .number-container__images
             .number-container__images--big
             .number-container__images--small
                 .number-container__images--small-one
                 .number-container__images--small-two
-        .number-container__description
-            .room-info
-                .number-block__title Сведения о номере
-                .room-info__comfort
-                    .room-info__comfort--img
-                        img(src="../img/comfort.svg")
-                    .room-info__comfort-text-block
-                        .room-info__comfort--text Комфорт
-                        .room-info__comfort--description Шумопоглащающие стены
-                .room-info__comfort
-                    .room-info__comfort--img
-                        img(src="../img/conveniens.svg")
-                    .room-info__comfort-text-block
-                        .room-info__comfort--text Удобство
-                        .room-info__comfort--description Окно в каждой из спален
-                .room-info__comfort
-                    .room-info__comfort--img
-                        img(src="../img/cosiness.svg")
-                    .room-info__comfort-text-block
-                        .room-info__comfort--text Уют
-                        .room-info__comfort--description Номер оснащён камином
-        .number-container__number-card
+        .number-container-main
+            .number-container__description
+                .room-info
+                    .number-block__title Сведения о номере
+                    .room-info__comfort
+                        .room-info__comfort--img
+                            img(src="../img/comfort.svg")
+                        .room-info__comfort-text-block
+                            .room-info__comfort--text Комфорт
+                            .room-info__comfort--description Шумопоглащающие стены
+                    .room-info__comfort
+                        .room-info__comfort--img
+                            img(src="../img/conveniens.svg")
+                        .room-info__comfort-text-block
+                            .room-info__comfort--text Удобство
+                            .room-info__comfort--description Окно в каждой из спален
+                    .room-info__comfort
+                        .room-info__comfort--img
+                            img(src="../img/cosiness.svg")
+                        .room-info__comfort-text-block
+                            .room-info__comfort--text Уют
+                            .room-info__comfort--description Номер оснащён камином
+                .room-voices
+                    .number-block__title Впечатления от номера
+                    .room-voices__stats
+                        .room-voices__circle 
+                            img(src="../img/voice-circle.svg")
+                        .room-voices__list
+                            .room-voices__list--item Великолепно
+                            .room-voices__list--item Хорошо 
+                            .room-voices__list--item Удовлетворительно
+                            .room-voices__list--item Разочарован
+            .number-container__number-card
+                .number-card__info
+                    .number-card__info--room-number № 888
+                    .number-card__info--lux ЛЮКС
+                    .number-card__info--price <b>9 990Р<b> в сутки
+                .number-card__dates
+                    .air-datepicker-global-container
+                    label.arrival Прибытие
+                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="arrival")
+                    label.departure Выезд
+                        input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="departure")
+                .number-card__guests 
+                    +dropdown('Гости', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'guests')
