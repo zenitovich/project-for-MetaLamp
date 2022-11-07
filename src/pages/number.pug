@@ -46,7 +46,7 @@ block content
                 .number-card__info
                     .number-card__info--room-number № 888
                     .number-card__info--lux ЛЮКС
-                    .number-card__info--price <b>9 990Р<b> в сутки
+                    .number-card__info--price <b>9 990Р</b> в сутки
                 .number-card__dates
                     .air-datepicker-global-container
                     label.arrival Прибытие
@@ -55,3 +55,20 @@ block content
                         input(type="text" class="date-registration" placeholder="ДД.ММ.ГГГГ" id="departure")
                 .number-card__guests 
                     +dropdown('Гости', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', 'guests')
+                .number-card__add-info 
+                    .number-card__add-info-container
+                        .number-card__add-info-container--text 9 990Р х 4 суток
+                        .number-card__add-info-container--value 39 960Р
+                    .number-card__add-info-container
+                        .number-card__add-info-container--text Сбор за услуги: скидка 2 179Р
+                        .number-card__add-info-container--icon 
+                            img(src="../img/info-icon.svg")
+                        .number-card__add-info-container--value 0Р
+                    .number-card__add-info-container
+                        .number-card__add-info-container--text Сбор за дополнительные <br>услуги
+                        .number-card__add-info-container--icon 
+                            img(src="../img/info-icon.svg")
+                        .number-card__add-info-container--value 300Р
+                .number-card__price-value 
+                    .number-card__price-value--text Итого
+                    .number-card__price-value--value 38 081Р

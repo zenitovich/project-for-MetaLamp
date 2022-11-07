@@ -117,6 +117,7 @@
     display: flex;
     justify-content: center;
 }
+
 .number-card__info {
     display: flex;
     justify-content: space-between;
@@ -140,4 +141,34 @@
 }
 .number-card__guests {
     font-family: 'Montserrat';
+}
+.number-card__add-info-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 24px;
+    &:last-child {
+        line-height: 18px;
+    }
+    &--icon {
+        position: absolute;
+        left: 220px;
+        cursor: pointer;
+    }
+}
+.number-card__price-value {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    color: #1F2041;
 }
