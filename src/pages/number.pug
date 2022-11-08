@@ -4,14 +4,19 @@ block title
 block scripts
 block content
     include ../components/dropdown/dropdown.pug
-    .number-container 
+
+    .number-container
+
         .number-container__images
             .number-container__images--big
             .number-container__images--small
                 .number-container__images--small-one
                 .number-container__images--small-two
+
         .number-container-main
+
             .number-container__description
+
                 .room-info
                     .number-block__title Сведения о номере
                     .room-info__comfort
@@ -32,6 +37,7 @@ block content
                         .room-info__comfort-text-block
                             .room-info__comfort--text Уют
                             .room-info__comfort--description Номер оснащён камином
+                
                 .room-voices
                     .number-block__title Впечатления от номера
                     .room-voices__stats
@@ -42,6 +48,28 @@ block content
                             .room-voices__list--item Хорошо 
                             .room-voices__list--item Удовлетворительно
                             .room-voices__list--item Разочарован
+
+                .room-reviews
+                    .room-reviews__title-block
+                        .number-block__title Отзывы посетителей номера
+                        .room-reviews__title-block--value-of-reviews 2 отзыва
+                    .room-reviews__review
+                        .room-reviews__review-avatar-block
+                            .room-reviews__review-avatar-block--avatar1
+                            .room-reviews__review-avatar-block--name-and-date <b>Мурад Сарафанов</b> <br>5 дней назад
+                        .room-reviews__review-and-likes 
+                            .room-reviews__review-and-likes--likes
+                                img(src="../img/likes-1.svg")
+                            .room-reviews__review-and-likes--text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                    .room-reviews__review
+                        .room-reviews__review-avatar-block
+                            .room-reviews__review-avatar-block--avatar2
+                            .room-reviews__review-avatar-block--name-and-date <b>Патрисия Стёклышкова</b> <br>Неделю назад
+                        .room-reviews__review-and-likes 
+                            .room-reviews__review-and-likes--likes
+                                img(src="../img/likes-2.svg")
+                            .room-reviews__review-and-likes--text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+
             .number-container__number-card
                 .number-card__info
                     .number-card__info--room-number № 888

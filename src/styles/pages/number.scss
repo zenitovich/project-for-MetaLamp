@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+//коллаж с фото вверху
 .number-container__images {
     display: flex;
     min-height: 485px;
@@ -27,6 +27,8 @@
         min-height: 243px;
     }
 }
+
+//заглавный текст у блоклв на странице
 .number-block__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -35,12 +37,16 @@
     color: #1F2041;
 }
 
+//блок для всех блоков в мэйне, кроме карточки номера
 .number-container__description {
     padding: 70px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 712px;
 }
 
+//первый блок, информаци яо номере
 .room-info {
     &__comfort {
         display: flex;
@@ -72,6 +78,8 @@
         }
     }
 }
+
+//отзывы со статистикой и картинкой
 .room-voices {
     &__stats {
         display: flex;
@@ -113,17 +121,23 @@
         }
     }
 }
+
+//контейнер для всех блоков (описание все блоки + карточка)
 .number-container-main {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
+//карточка номера
 .number-container__number-card {
     padding: 40px 30px 30px 30px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    max-height: 512px;
+    margin-top: 70px;
 }
 
 .number-card__info {
@@ -247,5 +261,58 @@
         border-radius: 22px;
         border: 0px;
         cursor: pointer;
+    }
+}
+
+//блок с отзывами
+.room-reviews {
+    max-width: 712px;
+    word-wrap: break-word;
+    margin-top: 10px;
+    &__title-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--value-of-reviews {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            color: rgba(31, 32, 65, 0.5);
+        }
+    }
+    &__review-avatar-block {
+        display: flex;
+        margin-top: 20px;
+        &--avatar1, &--avatar2 {
+            width: 48px;
+            height: 48px;
+            background: url(../../img/avatar1.svg) center -10px no-repeat;
+            border-radius: 50%;
+        }
+        &--avatar2 {
+            background: url(../../img/avatar2.svg) center -10px no-repeat;
+        }
+        &--name-and-date {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+            margin-left: 10px;
+        }
+    }
+    &__review-and-likes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        &--text {
+            margin-left: 15px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+        }
     }
 }
