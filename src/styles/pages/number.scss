@@ -39,11 +39,13 @@
 
 //блок для всех блоков в мэйне, кроме карточки номера
 .number-container__description {
-    padding: 70px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 712px;
+    @media (max-width: 650px) {
+        justify-content: center;
+    }
 }
 
 //первый блок, информаци яо номере
@@ -58,6 +60,7 @@
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         &:last-of-type {
             border: none;
+            padding-bottom: 0px;
         }
         &--img {
             margin-right: 10px;
@@ -125,8 +128,15 @@
 //контейнер для всех блоков (описание все блоки + карточка)
 .number-container-main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 50px 10% 70px 10%;
+    @media (max-width: 1400px) {
+        padding: 50px 1% 70px 1%;
+    }
+    @media (max-width: 1120px) {
+        justify-content: center;
+    }
 }
 
 //карточка номера
@@ -136,8 +146,8 @@
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    max-height: 512px;
-    margin-top: 70px;
+    max-height: 412px;
+    margin-top: 20px;
 }
 
 .number-card__info {
@@ -268,7 +278,6 @@
 .room-reviews {
     max-width: 712px;
     word-wrap: break-word;
-    margin-top: 10px;
     &__title-block {
         display: flex;
         align-items: center;
@@ -315,4 +324,51 @@
             color: rgba(31, 32, 65, 0.75);
         }
     }
+}
+
+//блок с правилами
+.room-rules {
+    .number-block__title {
+        margin-bottom: 20px;
+    }
+    &__item {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        position: relative;
+        margin-top: 10px;
+        max-width: 290px;
+        &::before {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            background: rgba(31, 32, 65, 0.25);;
+            top: 6px;
+            left: -15px;
+        }
+    }
+}
+
+//блок с отменой
+.room-return {
+    max-width: 341px;
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-top: 20px;
+    }
+}
+
+// параметры для блоков
+.room-info, .room-return, .room-reviews, .room-rules, .room-voices {
+    margin-top: 20px;
 }
