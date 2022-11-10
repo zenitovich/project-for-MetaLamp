@@ -32,3 +32,7 @@ let button = {
     new AirDatepicker("#departure2", {
     buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
      });
+
+    new AirDatepicker("#datesForSignUp", {
+    buttons: [button, "clear"], // Custom button, and pre-installed 'clear' button
+     });

@@ -1,0 +1,143 @@
+.signUp-container {
+    font-family: 'Montserrat';
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1F2041;
+    }
+    &__input {
+        &--text {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(31, 32, 65, 0.25);
+            padding: 13px 0px 13px 15px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 4px;
+            width: 320px;
+            display: block;
+        }
+        &--label-for-woman{
+            margin-left: 20px;
+        }
+        &--title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+        }
+        &--date {
+            color:  rgba(31, 32, 65, 0.75);
+            font-family: 'Montserrat';
+            font-size: 14px;
+            width: 320px;
+            padding-left: 15px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 4px;
+            margin-top: 5px;
+            padding: 12px 15px;
+            position: relative;
+            display: block;
+        }
+    } 
+}
+
+//стилизация радиокнопок
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+{
+    position: absolute;
+    left: -9999px;
+} 
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+}
+input[type="radio"]:checked + label {
+color: rgba(31, 32, 65, 0.75);
+}
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: #ffffff;
+    border-radius: 100%;
+}
+input[type="radio"]:checked + label:before {
+    border: 1px solid #BC9CFF;
+}
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+}
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+//стилизация переключателя
+.switch-btn {
+    display: inline-block;
+    width: 72px; /* ширина */
+    height: 38px; /* высота */
+    border-radius: 19px; /* радиус скругления */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+  }
+  .switch-btn::after {
+    content: "";
+    height: 32px; /* высота кнопки */
+    width: 32px; /* ширина кнопки */
+    border-radius: 17px;
+    background: #fff; /* цвет кнопки */
+    top: 3px; /* положение кнопки по вертикали относительно основы */
+    left: 3px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    position: absolute;
+    z-index: 1;
+  }
+  .switch-on {
+    background: #118c4e;
+  }
+  .switch-on::after {
+    left: 37px;
+  }
