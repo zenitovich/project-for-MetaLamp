@@ -1,13 +1,30 @@
 .signUp-container {
     font-family: 'Montserrat';
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    max-width: 380px;
+    margin: auto;
     &__title {
         font-style: normal;
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
         color: #1F2041;
+        margin-left: 30px;
     }
     &__input {
+        margin-top: 10px;
+        margin-left: 30px;
+        &:nth-child(5), &:nth-child(9) {
+            margin-top: 20px;
+        };
+        &:last-child {
+            margin-top: 30px;
+        }
         &--text {
             font-family: 'Montserrat';
             font-size: 14px;
@@ -23,6 +40,7 @@
             margin-left: 20px;
         }
         &--title {
+            margin-top: 20px;
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 700;
@@ -43,6 +61,50 @@
             padding: 12px 15px;
             position: relative;
             display: block;
+        }
+        &--button {
+            height: 44px;
+            width: 320px;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            text-transform: uppercase;
+            color:#FFFFFF;
+            font-size: 12px;
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-radius: 22px;
+            border: 0px;
+            cursor: pointer;
+        }
+        &--question {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #000000;
+        }
+        &--button-in {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #BC9CFF;
+            border-radius: 22px;
+            font-weight: bold;
+            padding: 15px 25px;
+            background-color: #ffffff;
+            border: 2px solid #bc9cff;
+            cursor: pointer;
+            width: 99px;
+            height: 44px;
+            margin-left: 35px;
+            a {
+            color: #bc9cff;
+            }
         }
     } 
 }
@@ -111,24 +173,25 @@ input[type="radio"]:checked + label:after {
 //стилизация переключателя
 .switch-btn {
     display: inline-block;
-    width: 72px; /* ширина */
-    height: 38px; /* высота */
+    width: 40px; /* ширина */
+    height: 20px; /* высота */
     border-radius: 19px; /* радиус скругления */
-    background: #bfbfbf; /* цвет фона */
+    background: #FFFFFF; /* цвет фона */
     z-index: 0;
     margin: 0;
     padding: 0;
-    border: none;
+    border-color: rgba(31, 32, 65, 0.25);
+    border: 1px solid rgba(31, 32, 65, 0.25);
     cursor: pointer;
     position: relative;
     transition-duration: 300ms; /* анимация */
   }
   .switch-btn::after {
     content: "";
-    height: 32px; /* высота кнопки */
-    width: 32px; /* ширина кнопки */
+    height: 12px; /* высота кнопки */
+    width: 12px; /* ширина кнопки */
     border-radius: 17px;
-    background: #fff; /* цвет кнопки */
+    background: rgba(31, 32, 65, 0.25);; /* цвет кнопки */
     top: 3px; /* положение кнопки по вертикали относительно основы */
     left: 3px; /* положение кнопки по горизонтали относительно основы */
     transition-duration: 300ms; /* анимация */
@@ -141,3 +204,28 @@ input[type="radio"]:checked + label:after {
   .switch-on::after {
     left: 37px;
   }
+  .main-for-sign {
+    background: url("../../img/background-for-sign.png") center center no-repeat;
+    background-size: cover;
+  }
+
+// параметры для распорок
+.wrapper {
+    min-height: 20px;
+}
+
+//спецпредложения и переключатель
+.switch-and-spez {
+    display: flex;
+    .signUp-container__input--spez {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        display: inline;
+        margin-left: 10px;
+        text-align: center;
+    }
+}

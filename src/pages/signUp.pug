@@ -4,25 +4,39 @@ block title
 block scripts
     include ../pages/scripts/signUp.js
 block content
-    .signUp-container 
-        .signUp-container__title Регистрация аккаунта
-        .signUp-container__input
-            input(type="text" placeholder="Имя" class="signUp-container__input--text")
-        .signUp-container__input
-            input(type="text" placeholder="Фамилия" class="signUp-container__input--text")
-        .signUp-container__input 
-            input(type="radio" name="male" id="man" class="signUp-container__input--radio")
-            label(for="man") Мужчина
-            input(type="radio" name="male" id="woman" class="signUp-container__input--radio")
-            label(for="woman" class="signUp-container__input--label-for-woman") Женщина
-            input(type="radio" name="male" id="woman" class="signUp-container__input--radio")
-            label(for="woman" class="signUp-container__input--label-for-woman") Пубертатно-конченный сексуально недопонятый козёл с зарплатой из компютерной графики
-        .signUp-container__input 
-            .air-datepicker-global-container
-            label(for="datesForSignUp" class="signUp-container__input--title") Дата рождения
-                input(type="text" class="signUp-container__input--date" placeholder="ДД.ММ.ГГГГ" id="datesForSignUp")
-        .signUp-container__input
-            .signUp-container__input--title Данные для входа на сервис
-            input(type="text" placeholder="Email" class="signUp-container__input--text")
-            input(type="text" placeholder="Пароль" class="signUp-container__input--text")
-            <div class="switch-btn switch-on"></div>
+    .main-for-sign
+        .wrapper
+        .signUp-container 
+            .signUp-container__title Регистрация аккаунта
+            .signUp-container__input
+                input(type="text" placeholder="Имя" class="signUp-container__input--text")
+            .signUp-container__input
+                input(type="text" placeholder="Фамилия" class="signUp-container__input--text")
+            .signUp-container__input 
+                input(type="radio" name="male" id="man" class="signUp-container__input--radio")
+                label(for="man") Мужчина
+                input(type="radio" name="male" id="woman" class="signUp-container__input--radio")
+                label(for="woman" class="signUp-container__input--label-for-woman") Женщина
+                //- input(type="radio" name="male" id="woman" class="signUp-container__input--radio")
+                //- label(for="woman" class="signUp-container__input--label-for-woman") Пубертатно-конченный сексуально недопонятый козёл с зарплатой из компютерной графики
+            .signUp-container__input 
+                .air-datepicker-global-container
+                label(for="datesForSignUp" class="signUp-container__input--title") Дата рождения
+                    input(type="text" class="signUp-container__input--date" placeholder="ДД.ММ.ГГГГ" id="datesForSignUp")
+            .signUp-container__input
+                .signUp-container__input--title Данные для входа на сервис
+                input(type="text" placeholder="Email" class="signUp-container__input--text")
+            .signUp-container__input
+                input(type="text" placeholder="Пароль" class="signUp-container__input--text")
+            .signUp-container__input
+                .switch-and-spez
+                    .switch-btn(id="switchBtn") 
+                    .signUp-container__input--spez Получать спецпредложения
+            .signUp-container__input 
+                input(type="button" class="signUp-container__input--button" value="Забронировать")
+            .signUp-container__input 
+                .signUp-container__input--question Уже есть аккаунт на Toxin
+                    button.signUp-container__input--button-in
+                        a(href="#") Войти
+        .wrapper
+
