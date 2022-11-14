@@ -19,7 +19,8 @@
     &__input {
         margin-top: 10px;
         margin-left: 30px;
-        &:nth-child(5), &:nth-child(9) {
+        position: relative;
+        &:nth-child(5){
             margin-top: 20px;
         };
         &:last-child {
@@ -29,7 +30,7 @@
             font-family: 'Montserrat';
             font-size: 14px;
             line-height: 18px;
-            color: rgba(31, 32, 65, 0.25);
+            color: #1F2041;
             padding: 13px 0px 13px 15px;
             border: 1px solid rgba(31, 32, 65, 0.25);
             border-radius: 4px;
@@ -74,6 +75,12 @@
             border-radius: 22px;
             border: 0px;
             cursor: pointer;
+            margin-top: 10px;
+        }
+        &--arrow {
+            position: absolute;
+            top: 23px;
+            left: 290px;
         }
         &--question {
             display: flex;
@@ -95,7 +102,7 @@
             color: #BC9CFF;
             border-radius: 22px;
             font-weight: bold;
-            padding: 15px 25px;
+            padding: 0 auto;
             background-color: #ffffff;
             border: 2px solid #bc9cff;
             cursor: pointer;
@@ -192,17 +199,19 @@ input[type="radio"]:checked + label:after {
     width: 12px; /* ширина кнопки */
     border-radius: 17px;
     background: rgba(31, 32, 65, 0.25);; /* цвет кнопки */
-    top: 3px; /* положение кнопки по вертикали относительно основы */
+    top: 4px; /* положение кнопки по вертикали относительно основы */
     left: 3px; /* положение кнопки по горизонтали относительно основы */
     transition-duration: 300ms; /* анимация */
     position: absolute;
     z-index: 1;
   }
   .switch-on {
-    background: #118c4e;
+    border-color: #BC9CFF;
+    border: 1px solid #BC9CFF;
   }
   .switch-on::after {
-    left: 37px;
+    background-color: #BC9CFF;
+    left: 25px;
   }
   .main-for-sign {
     background: url("../../img/background-for-sign.png") center center no-repeat;

@@ -1,1 +1,21 @@
 extends ../layout/default.pug
+block title
+    title signIn
+block scripts
+block content
+    .main-for-sign
+        .wrapper2
+        .signUp-container 
+            .signUp-container__title Войти
+            .signUp-container__input
+                input(type="text" placeholder="Email" class="signUp-container__input--text")
+            .signUp-container__input
+                input(type="text" placeholder="Пароль" class="signUp-container__input--text")
+            .signUp-container__input 
+                input(type="button" class="signUp-container__input--button" value="Войти")
+                img(src="../img/arrow_forward.svg" alt="Стрелка вправо" class="signUp-container__input--arrow")
+            .signUp-container__input 
+                .signUp-container__input--question Нет аккаунта на Toxin?
+                    button.signUp-container__input--button-in.create
+                        a(href="./signUp.html" target="_blank") Создать
+        .wrapper2
