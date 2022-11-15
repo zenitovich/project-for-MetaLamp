@@ -71,8 +71,71 @@
       right: -15px;
     }
   }
-  li.list-item.qw {
-    @media (max-width: 950px) {
-      display: none;
-    };
+//параметры для разных ul 
+ul.header__list {
+  @media (max-width: 950px) {
+    display: none;
+  };
+}
+ul.burger__list {
+  display: none;
+  @media (max-width: 950px) {
+    display: block;
+  };
+}
+
+.burger-menu {
+  cursor: pointer;
+  display: none;
+  z-index: 4;
+  @media (max-width: 950px) {
+    display: block;
   }
+  .b1, .b2, .b3 {
+    width: 36px;
+    height: 5px;
+    background-color: #bc9cff;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+}
+.change .b1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.change .b3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+.change .b2 {opacity: 0;}
+
+.burger {
+  display: none;
+  &__list  {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    li.list-item {
+      list-style-type: none;
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0px;
+      }
+      &--sign {
+        margin-top: 10px;
+        a {
+          color:  #bc9cff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+//показать по кнопке бурегр меню
+.display-block {
+  display: block;
+}

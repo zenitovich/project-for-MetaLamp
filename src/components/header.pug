@@ -1,13 +1,27 @@
 header.header
     .header__logo
         img(src="../img/Logo.svg" alt="Лого")
-            
+
+    .burger(id="burger")
+      ul.burger__list
+        li.list-item: a(href="#").link-item  О нас
+        li.list-item: a(href="#").link-item Услуги
+        li.list-item: a(href="#").link-item Вакансии
+        li.list-item: a(href="#").link-item Новости
+        li.list-item: a(href="#").link-item Соглашения
+        li.list-item--sign: a(href="./signIn.html" target="_blank").link-item Войти
+        li.list-item--sign: a(href="./signUp.html" target="_blank").link-item Зарегистрироваться
+    .burger-menu(id="burgerMenu")
+      .b1 
+      .b2 
+      .b3
+      
     ul.header__list 
-        li.list-item.qw: a(href="#").link-item  О нас
-        li.list-item.qw.dropdown: a(href="#").link-item Услуги
-        li.list-item.qw: a(href="#").link-item Вакансии
-        li.list-item.qw: a(href="#").link-item Новости
-        li.list-item.qw.dropdown: a(href="#").link-item Соглашения
+        li.list-item: a(href="#").link-item  О нас
+        li.list-item.dropdown: a(href="#").link-item Услуги
+        li.list-item: a(href="#").link-item Вакансии
+        li.list-item: a(href="#").link-item Новости
+        li.list-item.dropdown: a(href="#").link-item Соглашения
         li.list-item.button
           button.in
             a(href="./signIn.html" target="_blank") Войти
